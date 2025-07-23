@@ -1,0 +1,466 @@
+@import "variables";
+@import "item_grid";
+// Classes 
+
+body {
+  background-color: $black;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+
+}
+
+.lead {
+  font-size: 1rem;
+
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  text-align: start;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+}
+
+.bottom-line {
+  width: 60px;
+  background: $primary;
+  height: 2px;
+  margin: 0 1rem 1rem 1rem;
+  border-radius: 10px;
+
+}
+
+.side-line {
+  position: relative;
+  padding: 0 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: $primary; 
+    top: 80%;
+    transform: translateY(-40%);  
+
+  }
+
+  &::before {
+    left: 9rem;
+
+  }
+
+  &::after {
+    right: 44rem;
+
+  }
+}
+
+// NavBar 
+
+#navbar {
+  background-color: $black;
+  color: $primary;
+
+  .nav-item {
+    padding: 0.3rem 1rem;
+
+    a {
+      &.active {
+        color: $primary;
+        font-weight: bold;
+
+      }
+      &:hover {
+        color: $primary;
+
+      }
+    }
+
+  }
+
+}
+
+// Header : ShowCase
+
+#showcase {
+  background: $black url(/dist/imgs/showcase.jpg) no-repeat center center/cover;
+  height: 90vh;
+  color: $secondary;
+  overflow: hidden;
+  .container {
+    height: 70vh;
+    .row {  
+      padding-top: 10%;  
+
+      .m-heading {
+        font-size: 3rem;
+        font-weight: 250;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+      }
+      
+      .l-heading {
+        font-size: 4.5rem;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+        font-family: "Montserrat", sans-serif;
+
+      }
+
+      .lead {
+        line-height: 0.1rem;
+        font-family: "Libertinus Mono", monospace;
+
+      }
+      .col-md-6 {
+
+        .btn-holders {
+          display: flex;
+          justify-content: space-evenly;
+          gap: 1rem;
+          width: 25rem;
+          
+          a {
+            width: 10rem;
+
+          }
+          
+
+        }
+      }
+    }
+  }
+  .footer {
+    height: 5rem;
+    .container .row {
+      padding-top: 0;
+   
+    .footer-content {
+    display: flex;
+    justify-content: end;
+    height: 5rem;
+    align-items: start;
+  
+    .social .fa-whatsapp:hover {background: #25D366;}
+    .social .fa-facebook:hover {background: #4267B2;}
+    .social .fa-linkedin:hover {background: #0077B5;}
+    .social .fa-instagram:hover {background: #833AB4;}
+    .social .fa-behance:hover {background: #1769ff;}
+  
+    .social a {
+      color: #fff;
+  
+    }
+  
+    .social a .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+  
+        }
+
+      }
+
+    }
+
+  }
+}
+
+// Header : About
+
+#about {
+  background: $black url(/dist/imgs/001\ copy.jpg) no-repeat center center/cover;
+  color: #ddd;
+  .row {
+    .col-md-12 {
+      margin-top: 10vh;
+      .address-country {
+        padding-left: 13rem;
+        padding-bottom: 0;
+        padding-top: 0;
+        font-size: 1.5rem;
+
+        .address{
+          padding-top: 0;
+          padding-bottom: 0;
+          font-size: 1.3rem;
+  
+        }
+      }
+    }
+    .col-md-6 {
+      padding-top: 5rem;
+
+      .email {
+        font: 400 1rem "Montserrat", sans-serif;
+
+      }
+      .main {
+        font: 400 1.2rem "Montserrat", sans-serif;
+
+
+      }
+      img {
+        height: 50vh;
+        width: 50vb;
+
+      }
+      
+    }
+  }
+}
+
+// Header : Resume
+
+#resume {
+  background: $black url(/dist/imgs/reusmeBackground.jpg) no-repeat center center/cover;
+  height: 90vh;
+  opacity: 0.8;
+  overflow: hidden;
+  color: #fff;
+  .section-title {
+    text-transform: none;
+
+  }
+  .row {
+    padding-top: 1rem;
+    .bottom-line {
+      width: 15rem;
+      background: $primary;
+      height: 2px;
+      margin: 0 1rem 1rem 1rem;
+      border-radius: 10px;
+
+    }
+    // Software Skills
+    .skills {
+
+      .bottom-line {
+        width: 12rem;
+
+      }
+
+      .list-unstyled {
+        padding-top: 1rem;
+        .list {
+          margin-bottom: 1.2rem;
+          display: flex; 
+
+          img {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            
+          }
+          .lead {
+            font: 400 1.2rem "Montserrat", sans-serif;
+            padding-left: 1rem;
+
+          }
+
+        }
+
+      }
+    }
+    // Languages
+    .language {
+
+      .bottom-line{
+        width: 7.5rem;
+
+      }
+      .list-unstyled {
+        .list {    
+          margin-bottom: 0;  
+          .lead {
+            font-size: 1rem;
+            font-weight: 400;
+
+          }
+
+        }
+
+      }
+
+    }
+    // Personal Skills 
+    .personalSkills{
+
+      .bottom-line {
+        width: 11.5rem;
+
+      }
+
+    }
+    // Experience
+    .experience {
+
+      .bottom-line {
+        width: 8.5rem;
+
+      }
+      .timeline {
+        position: relative;
+        padding-left: 5rem;
+  
+        &::before {
+          content: '';
+          position: absolute;
+          left: 2.4rem;
+          top: 0;
+          bottom: 0;
+          width: 3px;
+          background: #e0e0e0;
+
+  }
+
+}
+
+.timeline-item {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3498db;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #3498db;
+
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+
+  }
+}
+
+.timeline-date, .sm {
+  position: absolute;
+  left: -180px;
+  top: 5px;
+  width: 120px;
+  text-align: right;
+  color: #fff;
+  font-weight: 500;
+
+}
+
+.timeline-content {
+  padding: 2px;
+  h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.25rem;
+
+  }
+
+  .lead {
+    font-size: 1rem;
+    font-weight: 600;
+
+  }
+
+}
+    }
+    .cv {
+      padding-left: 2rem;
+      .lead {
+
+        font-size: 1rem;
+        font-weight: 600;
+        padding-top: 0.5rem;
+        padding-bottom:0;
+        margin-bottom: 0.4rem;
+
+      }
+
+      a {
+        margin-top: 0;
+        margin-left: 1rem;
+        width: 14.5rem;
+
+      }
+
+    }
+    .last-col {
+      padding-left: 2rem;
+      // What I Do
+
+      .what {
+
+        .bottom-line {
+          width: 13rem;
+
+        }
+
+      }
+
+      // Design Skills
+
+      .design-skills{
+
+        .bottom-line {
+          width: 10rem;
+        }  
+      }
+      // Certifications
+      .certifcations {
+
+        .bottom-line {
+          width: 10.3rem;
+
+        }
+      }
+
+    }
+
+  }
+
+}
+
+// Section : Portfolio
+
+#portfolio {
+  background-color: #000;
+  color: #fff;
+  .section-title {
+    text-transform: none;
+    margin-top: 1rem;
+
+  }
+  .bottom-line {
+  width: 7.5rem;
+  background: $primary;
+  height: 2px;
+  margin: 0.5rem 1rem 1rem 31rem;
+  border-radius: 10px;
+
+  }
+  
+}
+
+@import 'media';  
